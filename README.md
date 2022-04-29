@@ -63,8 +63,11 @@ A common repository is setup for shared logic.
 Bogus will seed test data in the local environment on startup.
 
 - **Exceptions**: Common custom exceptions are available.
+Functions inherit from a base Function class which implements global exception handling.
 
 ### Shared
+
+- **Exceptions**: When exceptions happen in the API layer, a custom ErrorDetails class is returned.
 
 - **Models**: Models inherit from a common base Model class.
 

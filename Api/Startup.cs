@@ -13,6 +13,7 @@ public class Startup : FunctionsStartup
 {
     public override void Configure(IFunctionsHostBuilder builder)
     {
+        _ = builder.Services.AddLogging();
         _ = builder.Services.AddAutoMapper(typeof(Startup));
         _ = builder.Services.AddTransient<IDateTime, DateTimeService>();
         _ = builder.Services.AddTransient<IGuid, GuidService>();
