@@ -4,13 +4,20 @@ This template contains an example .NET 6 [Blazor WebAssembly](https://docs.micro
 
 ## Getting Started
 
-1. Create a repository from the [GitHub template](https://docs.github.com/en/enterprise/2.22/user/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) and then clone it locally to your machine.
-
-1. In the **Api** folder, copy `local.settings.example.json` to `local.settings.json`
-
-1. Continue using either Visual Studio or Visual Studio Code.
+*Optional: Setup Windows Terminal to close the process exits, fails or crashes instead of closing only when the process exits successfully.
+This will close the Azure Functions window when you stop debugging.*
 
 ### Visual Studio 2022
+
+1. Setup your workstation to develop with **[Blazor](https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor)**.  You will also need the **.NET WebAssembly build tools** optional component.
+
+1. Add the **Azure development workload** to Visual Studio.
+
+1. Install the **[Azure Static Web Apps CLI](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/introducing-the-azure-static-web-apps-cli/ba-p/2257581)**.
+
+1. Install the **[Markdown Editor](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor64)** extension.  You can use this to preview markdown files like this one.
+
+1. Install the **[Command Task Runner (64-bit)](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.CommandTaskRunner64)** extension.
 
 Once you clone the project, open the solution in [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) and follow these steps:
 
@@ -18,7 +25,6 @@ Once you clone the project, open the solution in [Visual Studio 2022](https://vi
 
 1. Select **Multiple startup projects** and set the following actions for each project:
     - *Api* - **Start**
-    - *ApiIsolated* - None
     - *Client* - **Start**
     - *Shared* - None
 
@@ -47,8 +53,21 @@ Once you clone the project, open the solution in [Visual Studio 2022](https://vi
 - **Client**: The Blazor WebAssembly sample application
 - **Api**: A C# Azure Functions API, which the Blazor application will call
 - **Shared**: A C# class library with a shared data model between the Blazor and Functions application
-- **ApiIsolated**: A C# Azure Functions API using the .NET isolated execution model, which the Blazor application will call. This version can be used instead of the in-process function app in `Api`.
 
 ## Deploy to Azure Static Web Apps
 
 This application can be deployed to [Azure Static Web Apps](https://docs.microsoft.com/azure/static-web-apps), to learn how, check out [our quickstart guide](https://aka.ms/blazor-swa/quickstart).
+
+## Reference
+
+### Articles
+
+- **[Deploying Blazor WebAssembly into Azure Static Web Apps](https://code-maze.com/deploying-blazor-webassembly-into-azure-static-web-apps/)**: In this article, we are going to learn about Azure Static Web Apps, which is a great solution for publishing static web applications into the cloud.
+
+- **[Azure Static Web Apps, Blazor, Authentication and Visual Studio 2022](https://scottkuhl.medium.com/azure-static-web-apps-blazor-authentication-and-visual-studio-2022-40364cc543b7)**: Azure Static Web Apps is a very easy way to create a secured Blazor Web Assembly application with a backend API based on Azure Functions. I will walk you through getting this all setup and running on your local workstation using Visual Studio 2022.
+
+### Documentation
+
+- **[Azure Static Web Apps](https://docs.microsoft.com/en-us/azure/static-web-apps/)**: Azure Static Web Apps allows you to build modern web applications that automatically publish to the web as your code changes.
+
+- **[Blazor WebAssembly](https://docs.microsoft.com/aspnet/core/blazor/)**: Blazor is a framework for building interactive client-side web UI with .NET.
