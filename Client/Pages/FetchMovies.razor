@@ -40,13 +40,6 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        try
-        {
-            movies = await Http.GetFromJsonAsync<Movie[]>("/api/Movies") ?? new Movie[]{};
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine(ex.ToString());
-        }
+        movies = await Http.GetFromJsonAsync<Movie[]>("/api/Movies") ?? new Movie[]{};
     }
 }
