@@ -1,0 +1,52 @@
+﻿@page "/fetchmovies"
+@using BlazorApp.Shared 
+@inject HttpClient Http
+
+<h1>Movies</h1>
+
+<p>This component demonstrates fetching data from Cosmos DB on the server.</p>
+
+@if (movies == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Title</th>
+                <th>Year</th>
+                <th>Summary</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var movie in movies)
+            {
+                <tr>
+                    <td><img src="@movie.PosterImageUrl" height="225" width="150" /></td>
+                    <td>@movie.Title</td>
+                    <td>@movie.Year</td>
+                    <td>@movie.Summary</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private Movie[] movies = new Movie[]{};
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            movies = await Http.GetFromJsonAsync<Movie[]>("/api/Movies") ?? new Movie[]{};
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.ToString());
+        }
+    }
+}
