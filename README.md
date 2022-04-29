@@ -76,10 +76,6 @@ This application can be deployed to [Azure Static Web Apps](https://docs.microso
 
 ## Reference
 
-### Books & Video Series
-
-- **[Guide to NoSQL with Azure Cosmos DB](https://www.packtpub.com/product/guide-to-nosql-with-azure-cosmos-db/9781789612899)**: By the end of the book, you will be able to build an application that works with a Cosmos DB NoSQL document database with C#, the .NET Core SDK, LINQ, and JSON.
-
 ### Articles
 
 - **[Deploying Blazor WebAssembly into Azure Static Web Apps](https://code-maze.com/deploying-blazor-webassembly-into-azure-static-web-apps/)**: In this article, we are going to learn about Azure Static Web Apps, which is a great solution for publishing static web applications into the cloud.
