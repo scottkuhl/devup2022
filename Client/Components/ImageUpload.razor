@@ -1,0 +1,38 @@
+﻿@using System.Net.Http.Headers
+@inject HttpClient Http
+
+<InputFile id="fileInput" OnChange="UploadImageAsync" hidden />
+
+<button for="fileInput">
+    Upload Image
+</button>
+
+@if(ImageUrl != null)
+{
+    <div>
+        <img src="@ImageUrl" style="width:300px" />
+    </div>
+}
+
+@code {
+    [Parameter] public string ImageUrl { get; set; } = string.Empty;
+    [Parameter] public EventCallback<string> OnChange { get; set; }
+
+    private async Task UploadImageAsync(InputFileChangeEventArgs e)
+    {
+        foreach (IBrowserFile? imageFile in e.GetMultipleFiles())
+        {
+            if (imageFile != null)
+            {
+                IBrowserFile? resizedFile = await imageFile.RequestImageFileAsync("image/png", 300, 500);
+                using Stream? ms = resizedFile.OpenReadStream(resizedFile.Size);
+                MultipartFormDataContent? content = new();
+                content.Headers.ContentDisposition = new ContentDispositionHeaderValue("form-data");
+                content.Add(new StreamContent(ms, Convert.ToInt32(resizedFile.Size)), "image", imageFile.Name);
+                var postResult = await Http.PostAsync("/api/ImageUpload", content);
+                ImageUrl = await postResult.Content.ReadAsStringAsync();
+                await OnChange.InvokeAsync(ImageUrl);
+            }
+        }
+    }
+}
