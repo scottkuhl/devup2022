@@ -1,5 +1,19 @@
 {
-    "navigationFallback": {
-        "rewrite": "/index.html"
+  "navigationFallback": {
+    "rewrite": "/index.html"
+  },
+  "routes": [
+    {
+      "route": "/api/movie*",
+      "allowedRoles": [ "administrator" ]
+    },
+    {
+      "route": "/.auth/login/github",
+      "statusCode": 404
+    },
+    {
+      "route": "/.auth/login/twitter",
+      "statusCode": 404
     }
+  ]
 }

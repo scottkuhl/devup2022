@@ -1,6 +1,9 @@
 ﻿@page "/fetchmovies"
 @using BlazorApp.Shared 
+@using Microsoft.AspNetCore.Authorization
 @inject HttpClient Http
+
+@attribute [Authorize]
 
 <h1>Movies</h1>
 
