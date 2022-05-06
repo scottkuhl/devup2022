@@ -65,6 +65,9 @@ Bogus will seed test data in the local environment on startup.
 - **Exceptions**: Common custom exceptions are available.
 Functions inherit from a base Function class which implements global exception handling.
 
+- **Uploads**: File uploads are stored in Azure Storage.
+The local Azurite emulator is installed with Visual Studio 2022 and the API project is configured to run it.
+
 ### Shared
 
 - **Exceptions**: When exceptions happen in the API layer, a custom ErrorDetails class is returned.

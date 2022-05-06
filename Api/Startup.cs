@@ -1,5 +1,6 @@
 ﻿using BlazorApp.Api;
 using BlazorApp.Api.Data;
+using BlazorApp.Api.Data.Images;
 using BlazorApp.Api.Data.Movies;
 using BlazorApp.Shared.Common.Services;
 using Microsoft.Azure.Functions.Extensions.DependencyInjection;
@@ -18,6 +19,7 @@ public class Startup : FunctionsStartup
         _ = builder.Services.AddTransient<IDateTime, DateTimeService>();
         _ = builder.Services.AddTransient<IGuid, GuidService>();
 
+        _ = builder.Services.AddTransient<IImageRepository, ImageRepository>();
         _ = builder.Services.AddScoped<IMovieRepository, MovieRepository>();
 
         Migration.SeedData(builder);
