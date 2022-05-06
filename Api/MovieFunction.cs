@@ -21,7 +21,7 @@ namespace BlazorApp.Api
         }
 
         [FunctionName("Movies")]
-        public async Task<IActionResult> List([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req, ILogger log, CancellationToken cancellationToken)
+        public async Task<IActionResult> List([HttpTrigger(AuthorizationLevel.Function, "get", Route = null)] HttpRequest req, ILogger log, CancellationToken cancellationToken)
         {
             System.Collections.Generic.IEnumerable<Movie> movies = await _repository.ListAsync(cancellationToken);
             return new OkObjectResult(movies);
