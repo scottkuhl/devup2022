@@ -2,6 +2,8 @@
 
 This template contains an example .NET 6 [Blazor WebAssembly](https://docs.microsoft.com/aspnet/core/blazor/?view=aspnetcore-6.0#blazor-webassembly) client application, a .NET 6 C# [Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview), and a C# class library with shared code.
 
+For a more complete example, see [Blazor Static Web App](https://github.com/scottkuhl/BlazorStaticWebApp).
+
 ## Getting Started
 
 *Optional: Setup Windows Terminal to close the process exits, fails or crashes instead of closing only when the process exits successfully.
@@ -84,7 +86,7 @@ This application can be deployed to [Azure Static Web Apps](https://docs.microso
 
 ### Books & Video Series
 
-- **[Microsoft Blazor: Building Web Applications in .NET 6 and Beyond](https://learning.oreilly.com/library/view/microsoft-blazor-building/9781484278451/)**: Reading this book helps you learn to build user interfaces and present data to a user for display and modification, capturing the user’s changes via data binding. The book shows how to access a rich library of .NET functionality such as a component model for building a composable user interface, including how to develop reusable components that can be used across many pages and websites. Also covered is data exchange with a server using REST, SignalR, and gRPC, giving you access to microservices and database services.
+- **[Microsoft Blazor: Building Web Applications in .NET 6 and Beyond](https://learning.oreilly.com/library/view/microsoft-blazor-building/9781484278451/)**: Reading this book helps you learn to build user interfaces and present data to a user for display and modification, capturing the userâ€™s changes via data binding. The book shows how to access a rich library of .NET functionality such as a component model for building a composable user interface, including how to develop reusable components that can be used across many pages and websites. Also covered is data exchange with a server using REST, SignalR, and gRPC, giving you access to microservices and database services.
 
 - **[Blazor WebAssembly - A Practical Guide to Full Stack Development With .NET](https://code-maze.com/blazor-webassembly-course/)**: The lessons start with the basic concepts of building a simple but practical application with Blazor WebAssembly. We cover all the things we need in order to build a real-world application and we quickly transition to building full-fledged application parts, slowly introducing the concepts as we go.
 
@@ -98,7 +100,7 @@ This application can be deployed to [Azure Static Web Apps](https://docs.microso
 
 - **[Azure Static Web Apps, Blazor, Authentication and Visual Studio 2022](https://scottkuhl.medium.com/azure-static-web-apps-blazor-authentication-and-visual-studio-2022-40364cc543b7)**: Azure Static Web Apps is a very easy way to create a secured Blazor Web Assembly application with a backend API based on Azure Functions. I will walk you through getting this all setup and running on your local workstation using Visual Studio 2022.
 
-- **[Azure Cosmos DB with ASP.NET Core Web API](https://code-maze.com/azure-cosmos-db-with-asp-net-core-web-api/)**: We’ll start by learning what an Azure Cosmos DB is and the various APIs that it supports. Then we’ll create a Cosmos DB from the portal. After that, we’ll learn how to create an ASP.NET Core application that connects with the Cosmos DB using the Core (SQL) API. First, we’ll test it locally and then deploy it to Azure. Finally, we’ll verify that everything works well together in the cloud environment.
+- **[Azure Cosmos DB with ASP.NET Core Web API](https://code-maze.com/azure-cosmos-db-with-asp-net-core-web-api/)**: Weâ€™ll start by learning what an Azure Cosmos DB is and the various APIs that it supports. Then weâ€™ll create a Cosmos DB from the portal. After that, weâ€™ll learn how to create an ASP.NET Core application that connects with the Cosmos DB using the Core (SQL) API. First, weâ€™ll test it locally and then deploy it to Azure. Finally, weâ€™ll verify that everything works well together in the cloud environment.
 
 - **[Azure BLOB Storage with ASP.NET Core and Angular](https://code-maze.com/azure-blob-storage-with-asp-net-core-and-angular/)**: In this article, we are going to take a look at the Azure Storage Platform and learn how to work with Azure BLOB Storage.
 
